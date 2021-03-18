@@ -1,0 +1,182 @@
+/**
+
+   reset css :
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav{
+    z-index: 1000;
+}
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+/* end reset */
+
+
+/*
+    photobox : nav
+ */
+div, nav, section, p, h1, h2 {
+  box-sizing: border-box; }
+
+nav {
+  padding: 2em;
+  font-size: 1.2em;
+}
+nav * {
+  font-size: 1.2em;
+}
+
+nav #next {
+  /*margin-left: 15%;*/
+}
+
+/**
+  photobox : Galerie
+ */
+.gallery-container {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
+    grid-gap: .2em;
+
+}
+
+.vignette img {
+    max-width: 100%;
+    height: auto; }
+
+
+/**
+  photobox : Lightbox
+ */
+.lightbox_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.lightbox_container--hidden {
+    display : none;
+}
+.lightbox_container--visible {
+    display : block;
+}
+
+#lightbox {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#lightbox-img {
+    width: 100%;
+    height: 92%;
+    position:relative;
+    background-color: black;
+}
+
+#lightbox-img img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+#lightbox-head {
+    height: 13%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: floralwhite;
+}
+
+#lightbox_title{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#lightbox_close{
+    font-size: x-large;
+}
+
+#lightbox_next, #lightbox_prev {
+    height: 100%;
+    width: 10%;
+    padding: 1em;
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#lightbox_next {
+    right: 0;
+}
+
+#lightbox_prev {
+    left: 0;
+}
+
+#lightbox_next:hover, #lightbox_prev:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+#lightbox_next > h2, #lightbox_prev > h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+#informations{
+    background-color: white;
+    color: black;
+}
